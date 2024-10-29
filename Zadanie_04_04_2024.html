@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 04.04.2024</title>
+
+    <style>
+
+        body {
+            background-color: rgb(154, 145, 255);
+        }
+
+        .div-one {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+        }
+
+        input {
+            width: 250px;
+            height: 50px;
+            font-size: 30px;
+
+        }
+
+        .div-two {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+        }
+
+        .div-three {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            margin: 10px;
+            font-size: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Dwa pola input (a i b). Do tych pól przepisać zdarzenie 
+        onchange (change). Sprawdza, że sprowadzana wartość musi 
+        mieścić się w przedziale od 0 do 100 -->
+    
+    <div id="divOne" class="div-one">
+        <input type="number" placeholder="Wpisz liczbę a" id="input-one">
+        <input type="number" placeholder="Wpisz liczbę b" id="input-two">
+    </div>
+
+    <div id="divTwo" class="div-two"></div>
+    <div id="divThree" class="div-three"></div>
+
+    <script type="text/javascript">
+
+        let inputOne = document.getElementById("input-one")
+        let inputTwo = document.getElementById("input-two")
+
+        let divTwo = document.getElementById("divTwo")
+        let divThree = document.getElementById("divThree")
+
+        let btn = document.getElementById
+
+        inputOne.addEventListener("change", () => {
+
+            let a;
+            a = inputOne.value
+            console.log("a = " +a)
+
+            if (a < 0 || a > 100) {
+
+                divTwo.innerText = "Liczba a nie mieści się w przedziale 0...100"
+
+            }
+
+            else {
+
+                divTwo.innerText = "Liczba a mieści się w przedziale 0...100"
+
+            }
+
+        })
+
+        inputTwo.addEventListener("change", () => {
+
+            let b;
+            b = inputTwo.value
+            console.log("b = " +b)
+
+            if ( b < 0 || b > 100) {
+
+            divThree.innerText = "Liczba b nie mieści się w przedziale 0...100"
+
+            }
+
+            else {
+
+            divThree.innerText = "Liczba b mieści się w przedziale 0...100"
+
+            }
+
+        })
+
+    </script>
+
+</body>
+</html>

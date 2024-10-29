@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 28.02.2024 | Zdarzenia 2</title>
+
+    <style>
+
+        button {
+            width: 200px;
+            height: 100px;
+            font-size: 2em;
+        }
+
+        #dol {
+            background-color: bisque;
+            min-height: 150px;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        #gora {
+            background-color:aqua;
+            min-height: 200px;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 5em;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <main>
+
+        <section id="gora">
+        </section>
+
+        <section id="dol">
+            <button id="klik">Kliknij raz</button>
+        </section>
+
+        <script type="text/javascript">
+
+            function klikraz() {
+                przycisk.innerText = "Już kliknięto!"
+                wynik.innerText = "Wylosowałeś klucz: "+Math.round(Math.random()*10000)
+                przycisk.removeEventListener("click", klikraz)
+            }
+
+            let wynik = document.getElementById("gora")
+            let przycisk = document.getElementById("klik")
+
+            przycisk.addEventListener("click", klikraz)
+
+        </script>
+
+    </main>
+    
+</body>
+</html>

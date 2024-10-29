@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 18.04.2024 (2)</title>
+
+    <style>
+
+        #image {
+            width: 100%;
+            height: 500px;
+            background-color: #9c9c9c;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- Mamy zdjęcie. Pod zdjeciem pojawia się jego opis. Po wyjechaniu
+    znika opis -->
+
+    <section id="image"><img id="img" src="https://picsum.photos/200/300"></section>
+    
+        <script type="text/javascript">
+
+            let img = document.getElementById("img")
+            let sectionImg = document.getElementById("image")
+
+            img.addEventListener("mouseover", () => {
+                var newSection = document.createElement("span")
+                sectionImg.appendChild(newSection)
+                newSection.id = "opis"
+                newSection.innerHTML = "Szerokość obrazka: " + img.width + "<br> Wysokość obrazka: " + img.height
+            })
+
+            img.addEventListener("mouseout", () => {
+                var newSection = document.getElementById("opis")
+                newSection.remove()
+            })
+
+        </script>
+
+</body>
+</html>

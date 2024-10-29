@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sprawdzian.na.Szota.com.ua</title>
+        <style>
+            *{
+                font-size: 10000 px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            #d1{
+                background-color: rgb(255, 196, 0);
+                padding: 20px;
+                text-align: left;
+            }
+            </style>
+            <style>
+                *{
+                    font-size: 500 px;
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                }
+    
+                #b1{
+                    background-color: rgb(0, 106, 255);
+                    padding: 20px;
+                    text-align: left;
+                }
+                </style>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="b1">
+        <script type="text/javascript">
+            // ZMIENNE let i var
+
+            document.write("<strong>ZMIENNE let i var</strong><br>")
+            var x = "Roman656565";
+            var x = "Roman656565ef";
+            document.write("x = "+x)
+            
+            var x = "200"
+            document.write("<br>x = "+x)
+            console.log(3.14)
+            document.write("<br>3.14 = "+3.14)
+
+            var a = "30";
+            var a = "BLACK MIGHT v.2"
+            document.write("<br>"+a)
+
+            // ZMIENNE const i console.log()
+        </script>
+        </div>
+        <div id="b1">
+        <script>
+            document.write("<hr><strong>ZMIENNE const i console.log()</strong>")
+                
+            const y = "BLACK MIGHT";
+            console.log(y);
+            document.write("<br>"+y);
+
+            const b = "BM to ja, Roman"
+            console.log(b)
+        </script>
+        </div>
+        <div id="b1">
+        <script>
+            let r=(Math.random()*10000)
+            document.write(Math.round(r))
+        </script>
+        </div>
+        <div id="d1">
+        <hr>
+        <script>
+            document.write("<strong>Math.</strong>")
+            document.write("<br>"+Math.random(1));
+
+            console.log(Math.random())
+            document.write("<br>"+Math.round(Math.random()*100))
+        </script>
+        </div>
+        <script>
+            // KALKULATOR
+            // let c=parseInt(prompt("Podaj pierwszą liczbę:",""))
+            // let d=parseInt(prompt("Podaj drugą liczbę:",""))
+            // let n=parseInt(prompt("Podaj znak (1=*, 2=/, 3=+, 4=-):",""))
+
+            // if(+n==1)
+            //{
+                // document.write("Wynik ="(+c*d));
+            //}
+            //else if(+n==2)
+            //{
+                //document.write("Wynik = "+(c/d));
+            //}
+            //else(+n==3)
+            //{
+                //document.write("Wynik = "+(c+d));
+            //}
+        </script>
+        <div id="d1">
+        <script>
+            document.write(Math.pow(Math.round(Math.random()*100),2))
+            console.log(Math.floor(5.99));
+
+            console.log(Math.floor(5.01));
+
+            console.log(Math.floor(5.000001));
+
+            console.log(Math.floor(-5.01));  
+        </script>
+        <hr>
+        <div is="d1">
+            <script>
+            // warunek1 && warunek2 AND
+            // warunek1 || warunek2 OR
+            // warunek NOT
+
+            // if(a>0 && b>0)
+
+            // np.
+            // if(c<a || c>b) sprawdzamy czy liczba c jest poza przedziałem (a;b>
+            
+            // let a=parsentInt(prompt("Podaj a","")); // parsentFloat()
+            // let a=parsentInt(prompt("Podaj b",""));
+
+            document.write("<strong>INSTRUKCJE STERUJĄCE if, else, else if</strong>")
+            document.write("<br>")
+            
+            let t =(Math.round(Math.random()*100)-50);
+            document.write(t)
+            document.write("<br>")
+            if (t > 50)
+            {
+                document.write(" ^--- Ta liczba jest większa niż 50, hurra!")
+            }
+            else if (t < 50)
+            {
+                document.write(" ^--- Ta liczba jest mniejsza niż 50 :( no to lipa..")
+            }
+            if (t==50)
+            {
+                document.write(" ^--- Ta liczba jest równa 50, rewelacja!")
+            }
+            let napis=t>0?"Ta liczba jest także większa niż 0":"Ta liczba jest mniejsza niż 0"
+            document.write("<br>"+napis)
+        </script>
+        <hr>
+        <script>
+            let sport = Math.round(Math.random()*3);
+            switch(sport){
+                case 1:
+                    document.write("Siatkówka");
+                    break;
+                case 2:
+                    document.write("Piłka nożna");
+                    break;
+                case 3:
+                    document.write("Siatkówka")
+                    break;
+                default:
+                    document.write("Nie ma sportu przydzelonego cyfrze 0")
+            }
+            document.write("<br>"+sport)
+        </script>
+        <hr>
+        <script>
+            document.write("<strong>PĘTLE for, while, do...while</strong>")
+            for (let i = 0; i < 6; i++) {
+                console.log("Iteracja numer " + i);
+                document.write("<br>Iteracja numer " + i);
+            }
+
+            let liczba = 0;
+                while (liczba < 5) {
+                console.log("Liczba wynosi: " + liczba);
+                liczba++;
+                }
+
+            
+        </script>
+    </body>
+</html>

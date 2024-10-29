@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<head>
+    <title>Selektory zadanie</title>
+</head>
+
+<body>
+    <table border="3">
+        <tr>
+            <th>
+                <p id="1">1</p>
+            </th>
+            <th>
+                <p id="2">2</p>
+            </th>
+        </tr>
+        <tr>
+            <th><img id="3"></th>
+            <th><img id="4"></th>
+        </tr>
+    </table>
+    <script type="text/javascript">
+
+        // The Document interface represents any web page loaded in the browser and serves as an entry point into the web age's content, which is the DOM tree.The DOM tree includes elements such as <body> and <table>, among many others. It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.-->
+
+        // The getElementById() method of the Document interface returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they re a useful way to get access to a specific element quickly.-->
+
+        // ты берешь из активной страницы (в твоем случаи твой сайт) елемент у которого id = 1-->
+        let liczba1 = document.getElementById("1")
+
+        // Math.random()*201 - создает число в пределе [0,201), Math.random() * 201 - 100 дает число в пределе [-100,101) Math.floor(...) используеться потому что random() дает не целое число (floating-type number: double, float, etc.)-->
+        let losowa1 = Math.floor(Math.random() * 201 - 100)
+        // ты передаешь число в текстовое значение елемента с id=1-->
+        liczba1.innerHTML = "Pierwsza losowa liczba to: " + losowa1
+
+        // тут тоже самое просто меняеться елемент в который вставляешь текст-->
+        let liczba2 = document.getElementById("2")
+        let losowa2 = Math.floor(Math.random() * 201 - 100)
+        liczba2.innerHTML = "Druga losowa liczba to: " + losowa2
+
+
+        let obraz = document.getElementById("3")
+        // random number in range [1, 6)
+        let r = Math.floor(Math.random() * 5 + 1)
+        console.log(r);
+        let rozmiarobrazka = r * 50
+        // document.write - writes to the end of web-page -->
+        document.write(rozmiarobrazka)
+
+        let obraz2 = document.getElementById("4")
+        let w = Math.floor(Math.random() * 5 + 1)
+        console.log(w);
+        let rozmiarobrazka2 = w * 50
+        document.write("<br>" + rozmiarobrazka2)
+
+        // передает значения фотографиям, дают ссылку на фотографию которую показать-->
+        obraz.src = "https://picsum.photos" + "/" + rozmiarobrazka + "/" + rozmiarobrazka
+        obraz2.src = "https://picsum.photos" + "/" + rozmiarobrazka2 + "/" + rozmiarobrazka2
+
+    </script>
+
+</body>
+
+</html>

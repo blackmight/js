@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 24.04.2024</title>
+
+    <style>
+        body {
+            background-color: #f1f1f1;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+
+        #section-one {
+            width: 200px;
+            height: 200px;
+            background-color: #0f0f0f;
+            color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            display: flex;
+        }
+
+        #section-two {
+            color: #0f0f0f;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            visibility: hidden;
+            display: flex;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section id="section-one">NAPIS</section>
+
+    <script type="text/javascript">
+
+        let sectionOne = document.getElementById("section-one")
+        let rysuj = 1
+        let newSection = document.createElement("section")
+        newSection.style.height = "0px"
+        newSection.style.width = "0px"
+        newSection.innerHTML = "NAPIS 2"
+        document.body.appendChild(newSection)
+        newSection.id = "section-two"
+        newSection.style.transition = "height 1s, visibility 1s"
+        newSection.style.backgroundColor = "yellow"
+
+        sectionOne.addEventListener("click", () => {
+            if (rysuj == 1) {
+                newSection.style.height = "100px"
+                newSection.style.width = "200px"
+                newSection.style.visibility = "initial"
+                rysuj = 0
+            }
+            else {
+                newSection.style.height = "0px"
+                newSection.style.visibility = "hidden"
+                rysuj = 1
+            }
+        })
+
+        // sectionOne.addEventListener("click", () => {
+        // let newSection = document.getElementById("section-two")
+        // newSection.remove()
+        // })
+
+    </script>
+
+</body>
+
+</html>

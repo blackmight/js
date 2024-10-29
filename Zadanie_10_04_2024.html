@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 10.04.2024</title>
+
+    <style>
+
+        html, body {
+            height: 100%;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            display: flex;
+        }
+
+        div {
+            width: 1000px;
+            height: 200px;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            display: flex;
+        }
+
+        section {
+            width: 250px;
+            height: 250px;
+            background-color: white;
+            border: rgb(0, 0, 0) solid 5px;
+            margin: 10px;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            display: flex;
+        }
+
+        input {
+            width: 100px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- mamy 2 sekcje z dwoma input() z a i b, mamy, checkbox 
+        mamy poniżej checkbox, przycisk. w drugiej sekcji  -->
+
+    <div>
+        <section id="section1">
+            <input type="number" placeholder="Wpisz liczbę a">
+            <input type="number" placeholder="Wpisz liczbę b">
+            <input type="checkbox">
+            <input type="radio">
+        </section>
+        <section id="section2"></section>
+    </div>
+
+    <script type="text/javascript">
+
+        let section1 = document.getElementById("section1")
+        let section2 = document.getElementById("section2")
+
+    </script>
+
+</body>
+</html>

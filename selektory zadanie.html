@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<head>
+    <title>Selektory zadanie</title>
+</head>
+
+<body>
+    <table border="3">
+        <tr>
+            <th>
+                <p id="1">1</p>
+            </th>
+            <th>
+                <p id="2">2</p>
+            </th>
+        </tr>
+        <tr>
+            <th><img id="3"></th>
+            <th><img id="4"></th>
+        </tr>
+    </table>
+    <script type="text/javascript">
+
+
+        let liczba1 = document.getElementById("1")
+        let losowa1 = Math.floor(Math.random() * 201 - 100)
+        liczba1.innerHTML = "Pierwsza losowa liczba to: " + losowa1
+
+        let liczba2 = document.getElementById("2")
+        let losowa2 = Math.floor(Math.random() * 201 - 100)
+        liczba2.innerHTML = "Druga losowa liczba to: " + losowa2
+
+        let obraz = document.getElementById("3")
+        let r = Math.floor(Math.random() * 5 + 1)
+        let rozmiarobrazka = r * 50
+        document.write(rozmiarobrazka)
+
+        let obraz2 = document.getElementById("4")
+        let w = Math.floor(Math.random() * 5 + 1)
+        let rozmiarobrazka2 = w * 50
+        document.write(rozmiarobrazka2)
+
+        obraz.src = "https://picsum.photos" + "/" + rozmiarobrazka + "/" + rozmiarobrazka
+        obraz2.src = "https://picsum.photos" + "/" + rozmiarobrazka2 + "/" + rozmiarobrazka2
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Skrypt 1b</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    <!-- nie zaczynaj nazw zmiennych i stałych od cyfr i pisz nazwy zmiennych po angielsku.
+        Bardzo częstą praktyką  jest stosowanie camelCase, czyli np. "veryImportantThing". -->
+    <script type="text/javascript">
+        // var - deklaracja zmiennej, obecnie stosujemy let
+        let a=parseInt(prompt("Podaj wartość a:","")) // parseFloat() 7.89
+        let b=parseInt(prompt("Podaj wartość b:",""))
+        document.write("a+b="+(a+b)+"<br>")
+        document.write(`${a}+${b}=${a+b}<br>`)
+        let c=Math.floor(Math.random()*100) //Math.floor() - zaokrąlenie w dół docałkowitej
+        //Math.random() - losuje wartość losową z zakresu 0..1
+        document.write("a="+a+"  b="+b+"  c="+c+"<br>")
+        //nowszy zapis deklaracji zmiennej
+        let z=100.5 //nazwa: z, wartość: 100.5, typ: float
+        let g="Ala"  //nazwa: g, wartość: Ala, typ: łancuch znaków (string)
+        // zapis stałej
+        const napis="Ala ma kota"
+        const podatekVat=23
+        //napis="Ola ma psa"; błąd!!!
+        document.write("napis="+napis+"<br>")
+        </script>
+    </body>
+</html>

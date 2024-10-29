@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Zadanie 07.03.2024</title>
+
+    <style>
+        body {
+            background-color: #fff0bd;
+        }
+
+        img {
+            margin: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Mamy obrazek na stronie. Kliknięcie na obrazek myszką powoduje że pod obrazkiem wyświetlają się współrzędne tego obrazka.  -->
+
+    <img src="https://picsum.photos/200/300" id="image">
+
+    <p id="x"></p>
+    <p id="y"></p>
+
+    <img src="Emoji_Smile.jpg" id="emoji">
+
+    <script type="text/javascript">
+
+        let image = document.getElementById("image")
+        let pierwszyAkapit = document.getElementById("x")
+        let drugiAkapit = document.getElementById("y")
+
+        let emoji = document.getElementById("emoji")
+
+        image.addEventListener("click", function (e) {
+
+            if (e.offsetX > 0 && e.offsetY < 150 && e.offsetY > 0 && e.offsetX < 200) {
+                image.src = `https://picsum.photos/${Math.floor(Math.random() * 10) + 290}`
+            }
+
+        })
+
+        image.addEventListener("mousemove", function (e) {
+            pierwszyAkapit.innerText = "X = " + e.offsetX
+            drugiAkapit.innerText = "Y = " + e.offsetY
+        })
+
+        emoji.addEventListener("click", function () {
+
+            emoji.src = "Emoji_Sad.png"
+            emoji.style.blockSize = "500px"
+
+        })
+
+    </script>
+
+</body>
+
+</html>

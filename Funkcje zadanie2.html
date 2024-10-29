@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<head>
+<title>Funkcje zadanie 2</title>
+<style>
+    td{
+        text-align: right;
+    }
+</style>
+</head>
+<body>
+    <script type="text/javascript">
+        const f1 = (a,b,c) => {
+            return Math.round((a*a-b)/c*100)/100
+        }
+
+        const f2 = (a,b,c) => {
+            return Math.round((b-c)/a*100)/100
+        }
+        
+        const f3 =(a,b,c) => {
+            return Math.round((Math.sqrt(b)*100+Math.cos(c)-Math.tan(a)+Math.log(c))*2+21,5)/100
+        }
+
+   // document.write(f1+"<br>")
+   // document.write(f2+"<br>")
+</script>   
+    
+<table border="3" width="200">
+    <tr>
+        <th>a</th><th>b</th><th>c</th><th>f1</th><th>f2</th><th>f3</th>
+    </tr>
+    <script type="text/javascript">
+        let b=300
+        let c=30
+        for(let a=1;a<11;a++)
+        {
+        document.write(`<tr><td>${a}</td><td>${b}</td><td>${c}</td><td>${f1(a,b,c)}</td><td>${f2(a,b,c)}</td><td>${f3(a,b++,c++)}</td></tr>`)
+        }
+    </script>
+</table>
+
+</body>
+</html>

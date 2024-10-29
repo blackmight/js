@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Instrukcje sterujące</title>
+            <style>
+                #abc{
+                    background-color: aqua;
+                }
+            </style>
+    </head>
+    <body>
+        <p id=abc>Akapit id=abc<p>
+
+        <script>
+            // warunek1 && warunek2 AND
+            // warunek1 || warunek2 OR
+            // warunek NOT
+
+            // if(a>0 && b>0)
+
+            // np.
+            // if(c<a || c>b) sprawdzamy czy liczba c jest poza przedziałem (a;b>
+            
+            // let a=parsentInt(prompt("Podaj a","")); // parsentFloat()
+            // let a=parsentInt(prompt("Podaj b",""));
+
+            let a=Math.round(Math.random()*100)-50; // losowe (-50;50)
+            let b=Math.round(Math.random()*100)-50;
+
+
+            document.write("a= "+a+"<br>")
+            document.write("a= "+b+"<br>")
+
+            // Instrukcja warunkowa
+            if(a>b)  // Operatory logiczne: > < != == >= <= ===
+            {
+                document.write("a > b")
+            }
+            else if(a==b)
+            {
+                document.write("a = b")
+            }
+            else(a<b)
+            {
+                document.write("a < b")
+            }
+            document.write("<br>")
+
+            // Operator warunkowy
+            let napis=a>0?"a jest dodatnie":"a nie jest dodatnie";
+            document.write(napis)
+            // Warunek "?" wartość gdy prawda:wartość gdy fałsz
+            document.write("<br>");
+
+            // Instrukcja wyboru
+            // a=20
+            switch(a)
+            {
+                case 3: document.write("a=3");
+                        break;
+                
+                case 10: document.write("a=10");
+                        break;
+
+                case 20: document.write("a=20");
+                        break;
+            }
+        </script>
+    </body>
+    </html>

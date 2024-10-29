@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+
+
+        const liczbylosowe = (x) => {
+            document.write(`<br>` + Math.round(Math.random() * 20 - 10))
+        }
+
+        for (x = 0; x < 10; x++) {
+            document.write(`<br>` + Math.round(Math.random() * 20 - 10))
+        }
+
+        const liczba_najwieksza = Math.max(liczbyLosowe)
+        document.write("Liczba największa = " + liczba_najwieksza)
+
+    </script>
+    <br>
+    <br>
+    <script>
+        // Generowanie 10 losowych liczb całkowitych z zakresu od 1 do 100
+        const liczbyLosowe = Array.from({ length: 10 }, () => Math.floor(Math.random() * 20 - 10));
+
+        // Znalezienie największej liczby w tablicy
+        const najwiekszaLiczba = Math.max(...liczbyLosowe);
+
+        // Wyświetlenie wyniku
+        document.write("Wylosowane liczby: ", liczbyLosowe);
+        document.write("<br>Największa liczba: ", najwiekszaLiczba);
+
+    </script>
+    <br>
+    <br>
+    <script>
+        function abcd(liczba) {
+            return liczba ** liczba;
+        }
+
+        function main() {
+            // Losujemy 10 liczb w zakresie od -10 do 10
+            let liczby = [];
+            for (let i = 0; i < 10; i++) {
+                liczby.push(Math.floor(Math.random() * 20) - 10);
+            }
+
+            // Znajdujemy największą liczbę
+            let najwiekszaLiczba = Math.max(liczby);
+
+            // Wysyłamy największą liczbę do funkcji abcd
+            let wynik = abcd(najwiekszaLiczba);
+
+            // Wyświetlamy wynik
+            console.log("Wynik:", wynik);
+        }
+
+        main();
+
+    </script>
+    <br>
+    <script>
+        (function x() {
+            let x = "Hello!!";
+            document.write("" + x)  // I will invoke myself
+        })();
+    </script>
+    <br>
+    <script>
+        function myFunction(a, b) {
+            return arguments.length;
+        }
+        document.write(myFunction());           // Output: 0
+        document.write(myFunction(1));          // Output: 1
+        document.write(myFunction(1, 2));       // Output: 2
+        document.write(myFunction(1, 2, 3));    // Output: 3
+
+    </script>
+    <br>
+    <br>
+    <script>
+        function abcd(liczba) {
+            return liczba ** liczba;
+        }
+
+        function main() {
+            // Losujemy 10 liczb w zakresie od -10 do 10
+            let liczby = [];
+            for (let i = 0; i < 10; i++) {
+                liczby.push(Math.floor(Math.random() * 20) - 10);
+            }
+
+            // Znajdujemy największą liczbę
+            let najwiekszaLiczba = Math.max(liczby);
+
+            // Wysyłamy największą liczbę do funkcji abcd
+            let wynik = abcd(najwiekszaLiczba);
+
+            // Wyświetlamy wynik
+            document.write("Wynik: ", wynik);
+        }
+
+        main();
+
+    </script>
+</body>
+
+</html>

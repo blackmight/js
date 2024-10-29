@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Funkcje</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // function razyDwa(a)
+        // {
+        //  return a*2   
+        // }
+
+        // const razyDwa = function(a)
+        // {
+        //  return a*2
+        // }
+
+        // funkcja w postaci strzałkowej
+        const razyDwa = (a) => {
+            return a * 2
+        }
+
+        const dodaj = (p, q, y) => {
+            return p + q + y
+        }
+
+        function sprawdzCzyParzysta(a) {
+            if (a % 2 == 0) return "parzysta" // 11%4 --> 3, 21%5 --> 1
+            else return "nieparzysta"
+        }
+
+        function pokaz() {
+            let c = 50; // zmienne lokalne funkcji
+            // c=10; // to zmienia zmienną globalną !!!
+            document.write("W funkcji pokaz c = " + c + "<br>")
+        }
+
+        let b = Math.round(Math.random() * 100)
+        document.write("Liczba " + b + " pomnożona razy 2 = " + razyDwa(b) + "<br>");
+        document.write("Suma liczb 3,4,5 wynosi " + dodaj(3, 4, 5) + "<br>")
+        document.write("Liczba 7 jest " + sprawdzCzyParzysta(7) + ",  a liczba 8 jest " + sprawdzCzyParzysta(8) + "<br>")
+
+        let c = 100
+        pokaz()
+        document.write("c = " + c)
+        // document.write = 'Nowy tytuł'
+    </script>
+</body>
+
+</html>

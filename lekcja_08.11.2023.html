@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lekcja 08.11.23</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            background: green;
+        }
+
+        h1 {
+            margin: 300px auto;
+            text-align: center;
+            color: white;
+            font-size: 4.5em;
+            transition: 0.5s;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1:hover {
+            text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc,
+                0 3px 0 #ccc, 0 4px 0 #ccc,
+                0 5px 0 #ccc, 0 6px 0 #ccc,
+                0 7px 0 #ccc, 0 8px 0 #ccc,
+                0 9px 0 #ccc, 0 10px 0 #ccc,
+                0 11px 0 #ccc, 0 12px 0 #ccc,
+                0 20px 30px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 1 użytkownik podaje liczbę a, drugi użytkownik podaje liczbę b. Program losuje sto liczb w zakresie od 1 do 100. I sprawadza ile wystąpiło liczb a i ile b. Jeśłi więcej było a, wygrał użytkownik 1 i na odwrót.
+
+        let a = parseInt(prompt("Podaj liczbę a:", ""));
+        let b = parseInt(prompt("Podaj liczbę b:", ""));
+        let punkty1uzytkownik = 0
+        let punkty2uzytkownik = 0
+        for (let x = 0; x < 100; x++) {
+            let losowa = Math.round(Math.random() * 100)
+            console.log(losowa)
+            if (losowa == a) {
+                punkty1uzytkownik++
+            }
+            if (losowa == b) {
+                punkty2uzytkownik++
+            }
+        }
+
+        function wygrany(x, y) {
+            if (x > y) {
+                return "<br><h1>Użytkownik 1 wygrywa</h1>"
+            }
+            if (y > x) {
+                return "<br><h1>Użytkownik 2 wygrywa</h1>"
+            }
+            else {
+                return "<br><h1>Remis</h1>"
+            }
+        }
+        document.write(`<br><h1>Liczba pierwszego użytkownika pojawiła się ${punkty1uzytkownik} razy <br> liczba drugiego użytkownika pojawiła się ${punkty2uzytkownik} razy <br> ${wygrany(punkty1uzytkownik, punkty2uzytkownik)}</h1>`)
+    </script>
+</body>
+
+</html>

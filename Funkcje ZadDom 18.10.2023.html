@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let a = Math.round(Math.random() * 100)
+        const razyDwa = (a) => {
+            return +a * 2
+        }
+        document.write("Liczba a = " + a + "<br>")
+        document.write("Liczba a razy 2 = " + razyDwa(a))
+    </script>
+    <br>
+    <script>
+        function sprawdzCzyParzysta(a) {
+            if (a % 2 == 0) return "parzysta"
+            else return "nieparzysta"
+        }
+
+        document.write("<br>Liczba a jest " + sprawdzCzyParzysta(a))
+    </script>
+    <br>
+    <script>
+        let x = Math.round(Math.random() * 1000)
+        let y = Math.round(Math.random() * 1000)
+        let z = Math.round(Math.random() * 1000)
+
+        function dodaj(x, y, z) {
+            return x + y + z
+        }
+
+        document.write("<br>Liczba x = " + x + "<br>")
+        document.write("Liczba y = " + y + "<br>")
+        document.write("Liczba z = " + z + "<br>")
+        document.write("Suma liczb x, y, z równa się: " + dodaj(x, y, z))
+    </script>
+    <br>
+    <script>
+        // let h = 17.5
+        // let s = 30
+
+        // function tangens(h, s) {
+        // return Math.atan()
+        // }
+        // document.write("Tangens równa się: " + tangens)
+        // document.write("<br>Liczba h = " + h + "<br>")
+        // document.write("Liczba s = " + s + "<br>")
+    </script>
+    <br>
+    <script>
+        let h = 17.5;
+        let S = 30;
+
+        // Obliczenie tangensa
+        let tangensTheta = h / S;
+
+        console.log(tangensTheta);
+        document.write("h = " + h)
+        document.write("<br>S = " + S)
+        document.write("<br>" + tangensTheta)
+
+        function calcAngle(opposite, adjacent) {
+            return Math.atan(h / S)
+        }
+        document.write("<br>Arctan = " + calcAngle)
+    </script>
+    <br>
+    <script>
+        let u = Math.round(Math.random() * 500)
+        let i = Math.round(Math.random() * 200)
+        let o = Math.round(Math.random() * 600)
+        let p = Math.round(Math.random() * 1000)
+        document.write("<br>Liczba u równa się = " + u)
+        document.write("<br>Liczba i równa się = " + i)
+        document.write("<br>Liczba o równa się = " + o)
+        document.write("<br>Liczba p równa się = " + p)
+        const f1 = (u, i, o, p) => {
+            return (u * i) + (o * p)
+        }
+
+        const f2 = (u, i, o, p) => {
+            return Math.round(((u - i * p) / o * 100) / 100)
+        }
+
+        const f3 = (u, i, o, p) => {
+            return ((u * i + o * i - u) - p) - 50000
+        }
+        const f4 = (u, i, o, p) => {
+            return Math.round(Math.sqrt(u * i + o * p))
+        }
+
+        const f5 = (u, i, o, p) => {
+            return Math.round(Math.cos((Math.sqrt((u * i + o * p) * 10000))))
+        }
+    </script>
+    <br>
+    <br>
+    <table border="5" width="250">
+        <tr>
+            <th>Kolejność</th>
+            <th>u</th>
+            <th>i</th>
+            <th>o</th>
+            <th>p</th>
+            <th>f1</th>
+            <th>f2</th>
+            <th>f3</th>
+            <th>f4</th>
+            <th>f5</th>
+        </tr>
+        <script type="text/javascript">
+
+            for (let q = 1; q < 2; q++) {
+                document.write(`<tr>
+                    <td>${q}</td>
+                    <td>${u}</td>
+                    <td>${i}</td>
+                    <td>${o}</td>
+                    <td>${p}</td>
+                    <td>${f1(u, i, o, p)}</td>
+                    <td>${f2(u, i, o, p)}</td>
+                    <td>${f3(u, i, o, p)}</td>
+                    <td>${f4(u, i, o, p)}
+                    <td>${f5(u, i, o, p)}
+                                </tr>`)
+            }
+        </script>
+    </table>
+    <br>
+    <script>
+        let w = Math.round(Math.random()*100) 
+        let e = Math.round(Math.random()*100)
+        let punkty_aboba = 0;
+        let punkty_aboba2 = 0;
+        for (r = 0; r < 100; r++){
+            losowe_punkty = Math.round(Math.random()*100)
+            console.log(losowe_punkty)
+            
+            if(losowe_punkty == w){
+            punkty_aboba++
+            }
+
+            if(losowe_punkty == e){
+            punkty_aboba2++
+            }
+        }
+
+        function wygrany (g,h) {
+            if (g<h){
+                return "<br><h1>aboba wygrywa!</h1>"
+            }
+            if (g>h){
+                return "<br><h1>aboba2 wygrywa!</h1>"
+            }
+            else{
+                "<br><h1>Remis ;(</h1>"
+            }
+        }
+        document.write(`<br><h1>Liczba aboby pojawiła się ${punkty_aboba} razy <br> liczba aboby2 pojawiła się ${punkty_aboba2} razy <br> ${wygrany(punkty_aboba, punkty_aboba2)}</h1>`)
+        document.write("Liczba aboby = "+ punkty_aboba)
+        document.write("<br>Liczba aboby2 = " + punkty_aboba2)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia zadania</title>
+
+    <style>
+        body {
+            background-color: hsl(216, 100%, 82%);
+        }
+
+        img {
+            margin: 10px;
+            box-shadow: black 0px 0 10px;
+            transition: 0.5s;
+        }
+
+        img:hover {
+            box-shadow: rgb(173, 173, 173) 0px 0 10px;
+            border: 5px solid black;
+            transition: 0.5s;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <img src="https://picsum.photos/200/300?random=1" id="img-one" onclick="imgChange(0)">
+    <img src="https://picsum.photos/200/300?random=2" id="img-two" onclick="imgChange(1)">
+    <br>
+    <img src="https://picsum.photos/200/300?random=3" id="img-three" onclick="imgChange(2)">
+    <img src="https://picsum.photos/200/300?random=4" id="img-four" onclick="imgChange(3)">
+
+    <script type="text/javascript">
+        let obrazy=["https://picsum.photos/200/300?random=1","https://picsum.photos/200/300?random=2","https://picsum.photos/200/300?random=3","https://picsum.photos/200/300?random=4"]
+        let imgOne = document.getElementById("img-one")
+        let imgTwo = document.getElementById("img-two")
+        let imgThree = document.getElementById("img-three")
+        let imgFour = document.getElementById("img-four")
+
+
+        function imgChange(a){
+                imgOne.src=obrazy[a];
+                imgTwo.src = obrazy[a];
+                imgThree.src = obrazy[a];
+                imgFour.src = obrazy[a];
+        }
+
+        // function imgChange(a) {
+        //     if ( a == 0) {
+        //         imgTwo.src = obrazy[a];
+        //         imgThree.src = obrazy[a];
+        //         imgFour.src = obrazy[a];
+        //     }
+        //     if (imgTwo.src == "https://picsum.photos/200/300?random=2") {
+        //         imgOne.src = "https://picsum.photos/200/300?random=2";
+        //         imgThree.src = "https://picsum.photos/200/300?random=2";
+        //         imgFour.src = "https://picsum.photos/200/300?random=2";
+        //     }
+        //     if (imgThree.src == "https://picsum.photos/200/300?random=3") {
+        //         imgOne.src = "https://picsum.photos/200/300?random=3";
+        //         imgTwo.src = "https://picsum.photos/200/300?random=3";
+        //         imgFour.src = "https://picsum.photos/200/300?random=3";
+        //     }
+        //     if (imgFour.src == "https://picsum.photos/200/300?random=4") {
+        //         imgOne.src = "https://picsum.photos/200/300?random=4";
+        //         imgThree.src = "https://picsum.photos/200/300?random=4";
+        //         imgTwo.src = "https://picsum.photos/200/300?random=4";
+        //     }
+        // }
+        
+
+    </script>
+
+</body>
+</html>

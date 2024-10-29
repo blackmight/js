@@ -1,0 +1,188 @@
+/*H1 and BODY*/
+
+body {
+    background-image: linear-gradient(pink, rgb(21, 95, 255, 0.73)), url(Background_3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    font-family: "Unbounded";
+    text-align: left;
+    text-shadow: rgba(172, 96, 173, 0.688) 1px 0 10px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+/*FLAGS*/
+
+.flags {
+    width: 500px;
+    height: 60px;
+    background-color: transparent;
+}
+
+.flag_of_Ukraine {
+    width: 40px;
+    display: auto;
+    margin-left: auto;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.404) 0px 0 15px;
+    transition: width 0.5s;
+    transition: box-shadow 0.5px;
+}
+
+.flag_of_Poland {
+    width: 44px;
+    display: auto;
+    margin-left: auto;
+    margin: 10px;
+    margin-left: 25px;
+    box-shadow: rgba(0, 0, 0, 0.404) 0px 0 15px;
+    transition: width 0.5s;
+    transition: box-shadow 0.5px;
+}
+
+.flag_of_Ukraine:hover {
+    box-shadow: rgba(255, 217, 0, 0.404) 0px 0 15px;
+    transition: 0.5s;
+    width: 50px;
+}
+
+.flag_of_Poland:hover {
+    box-shadow: rgba(255, 0, 0, 0.404) 0px 0 15px;
+    transition: 0.5s;
+    width: 50px;
+}
+
+/*DIV*/
+
+.div-one {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.div-two {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-three {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-four {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-five {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-six {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-seven {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-eight {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-nine {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-ten {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-eleven {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-twelve {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-thirteen {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.div-fourteen {
+    font-family: "Unbounded";
+    background: transparent;
+    width: 900px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+/*LINK*/
+
+link {
+    transition: 1s;
+}
+
+.link:hover {
+    background-color: rgba(33, 92, 255, 0.884);
+    border-radius: 5px;
+    color: pink;
+    text-decoration: underline;
+    text-decoration-color: pink;
+    box-shadow: rgb(48, 104, 255) 0px 0 10px;
+    transition: 0.3s;
+}

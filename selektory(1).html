@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<head>
+    <title>Selektory</title>
+    <style>
+        .czerwony{
+            color: red;
+            background-color: black;
+        }
+
+        .h1{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class=".czerwony">Witaj</h2>
+    <p id="pierwszy">Wit<strong>aj</strong></p>
+    <p id="drugi">Wit<strong>aj</strong></p>
+    <p>DOM - Document Object Model</p>
+    <p class="h1">Demonstracja działania <b> selektorów</b></p>
+    <p id="demo"></p>
+
+    <input type="text" id="imie" value="Ala">
+    <br>
+    <input type="number" id="liczba2" placeholder="wpisz kod pocztowy">
+    <br>
+    <img id="obrazek" src="https://picsum.photos/200/300">
+    <img id="obrazek1" src="https://picsum.photos/200/300">
+
+
+    <script type="text/javascript">
+
+        // The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.
+        // querySelectorAll - тоже самое только самое только возвращает ВСЕ элементы с таким селектором
+        let y = document.getElementById("demo")
+        let y1 = document.querySelector("#demo")
+        let x = document.getElementsByName("img")
+        var x1 = document.querySelectorAll("p")
+        var x2 = document.querySelectorAll(".czerwony")
+
+        // приписывает текст елементу c id=demo
+
+        y.innerHTML = "Pierwszy akapit to " + x1[0].innerHTML
+
+        // сохраняет в переменную значение которые хранит элемент с id=imie
+
+        let imie = document.getElementById("imie").value
+
+        // вызивает окно с текстом которые храниться в переменной imie
+        alert(imie)
+
+        // устанавливает цвет и размер текста для элемента с id=demo
+        y.style.color = "blue"
+        y.style.fontSize = "1.5em"
+        
+        z.src = "https://picsum.photos/200/200"
+    </script>
+</body>
+
+</html>

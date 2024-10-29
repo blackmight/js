@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablice</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Kilka divów i kilka obrazków na stronie -->
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+    <img id="aa1" src="https://picsum.photos/150">
+    <img id="aa2" src="https://picsum.photos/150">
+    <img id="aa3" src="https://picsum.photos/150">
+
+    <script>
+        // Inicjalizacja różnych tablic i manipulacje nimi
+        let tablica1 = new Array(1, 2, 3)
+        let tablica2 = new Array(10, 11)
+        let tablica3 = new Array(10, 22, 35, 44, 57, 62, 78, 84, 98, 106)
+        let tablica4 = []
+        let tablica5 = [10]
+        let tablica6 = [13, 22, 35, 44, 57, 62, 78, 84, 98, 106]
+
+        document.write("<br>" + tablica1 + " - To jest tablica 1");
+        document.write("<br>" + tablica2 + " - To jest tablica 2");
+        document.write("<br>" + tablica3 + " - To jest tablica 3");
+        
+        // Wypisanie wartości tablicy i zmiana jednego z jej elementów
+        document.write("<br>"+tablica3[3]+" - To jest 3 element tablicy 3 ( [3] )<br>")
+        tablica3[3] = 100 // Zmiana trzeciego elementu tablicy 3 na 100
+        document.write(tablica3[3]+" - Zmiana trzeciego elementu tablicy 3 na 100. I potem wyświetlanie go <br>")
+        document.write("<br>"+tablica3 + " - Wyświetlanie tablicy z nowym elementem '100' na trzeciej pozycji")
+        document.write("<br>Tablica3 zawiera "+ tablica3.length +" elementów<br>") // Wyświetlanie liczby elementów tablicy przed zmianą
+        
+        // Informacje o długości tablicy oraz dodanie i usunięcie elementów
+        document.write("<br>Tablica3 zawiera "+ tablica3.length +" elementów<br>") // Wyświetlanie liczby elementów tablicy po zmianie
+        tablica3.push(200) // Dodanie na końcu tablicy 200
+        tablica3.forEach((wartosc, indeks) => { // w przypadku forEach 
+            document.write(indeks+":"+wartosc+ " ")
+        })
+        tablica3.pop() // Usunięcie z końca tablicy
+        document.write("<br>Tablica3 zawiera ponownie "+tablica3.length+" elementów<br>")
+        
+        // Wypisanie elementów tablicy za pomocą pętli for
+        for(let i = 0; i<tablica3.length; i++) {
+            document.write(i+":"+tablica3[i]+" ")
+        }
+        document.write("<br>")
+        document.write(tablica3)
+        
+        // Usunięcie pierwszego elementu tablicy i wstawienie nowego na początku
+        tablica3.shift()
+        document.write("<br><hr>")
+        document.write(tablica3)
+        tablica3.unshift(1000)
+        document.write("<br>")
+    
+        document.write("Tablica 3: " + tablica3)
+        
+        // Wyszukanie indeksu wartości w tablicy oraz usunięcie fragmentu tablicy
+        document.write("<br>Wartość 22 jest na pozycji "+tablica.indexOf(22))
+        var usunieteZtablicy3 = tablica3.splice(1,2)
+        document.write("<br>"+usunieteZtablicy3)
+        document.write("<br>")
+        document.write(tablica3)
+        
+        // Utworzenie kopii tablicy i jej wypisanie
+        var tablica3kopia = tablica3.slice()
+        document.write("<br>")
+        document.write(tablica3kopia)
+        document.write("<br>")
+        
+        // Wypisanie elementów tablicy, z jednym z nich wyróżnionym kolorem czerwonym
+        for (let i=0; i<tablica3.length; i++) {
+            if (i==5) {
+                document.write("<span class=red>")
+                document.write(tablica3[i]+" ")
+                document.write("</span>")
+            }
+            else document.write(tablica3[i]+" ")
+        }
+        
+        // Znalezienie wszystkich obrazków i divów na stronie i manipulacja nimi
+        const imgy = document.querySelectorAll('img')
+        document.write("<br>")
+        imgy.forEach((element, indeks) => {
+            console.log(element.id+"-->"+indeks+"-->"+element.src+"<br>")
+            element.src="https://picsum.photos/100"
+        })
+        const divy = document.querySelectorAll('div')
+        document.write("<br>")
+        divy.forEach((element, indeks) => {
+            console.log(element.id+"-->"+indeks+"<br>")
+        })
+
+    </script>
+    <br>
+</body>
+
+</html>

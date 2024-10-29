@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia Zadanie</title>
+
+    <style>
+        div {
+
+            width: 150px;
+            height: 150px;
+            border: 5px solid;
+            border-radius: 15px;
+            margin: 10px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- 4 sekcji o wysokości x. na początku jedna z tych sekcji ma tło zeilone. Jak klikniemy na tą sekcję przebiegnie zielone tło do innej sekcji -->
+    
+    <div id="div-one" onmouseover="clickDiv('div-one')" onclick="doRed('div-one')"></div>
+    <div id="div-two" onmouseover="clickDiv('div-two')" onclick="doRed('div-two')"></div>
+    <div id="div-three" onmouseover="clickDiv('div-three')" onclick="doRed('div-three')"></div>
+    <div id="div-four" onmouseover="clickDiv('div-four')" onclick="doRed('div-four')"></div>
+
+    <script type="text/javascript">
+
+        let divOne = document.getElementById("divOne")
+        let divTwo = document.getElementById("divTwo")
+        let divThree = document.getElementById("divThree")
+        let divFour = document.getElementById("divFour")
+        let divy = document.querySelectorAll("div")
+        let losowyDiv = Math.floor(Math.random()*divy.length)
+
+    function clickDiv(idDiv) {
+
+
+        for(let x = 0; x<divy.length; x++) {
+
+            divy[x].style.backgroundColor = null
+
+        }
+
+        document.getElementById(idDiv).style.backgroundColor = "green"
+
+    }
+
+    function doRed(idDiv) {
+
+        document.getElementById(idDiv).style.backgroundColor = "red"
+
+    }
+
+    </script>
+
+</body>
+</html>

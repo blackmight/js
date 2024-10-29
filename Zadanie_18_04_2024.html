@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 18.04.2024(1)</title>
+
+    <style>
+
+
+
+    </style>
+
+</head>
+<body id="body">
+
+    <!-- Zadanie: -->
+
+    <button onclick="add()">Create an element</button>
+    <button onclick="del()">Delete an element</button>
+    
+    <script type="text/javascript">
+
+        function add() {
+            var newButton = document.createElement("button")
+            newButton.innerHTML = "New button"
+            document.body.appendChild(newButton)
+            newButton.id = "newBtn1"
+            newButton.classList.add("class1")
+        }
+
+        function del() {
+            var newButton = document.getElementById("newBtn1")
+            newButton.remove()
+        }
+
+    </script>
+
+    <!-- Mamy zdjęcie. Pod zdjeciem pojawia się jego opis. Po wyjechaniu
+    znika opis -->
+    
+</body>
+</html>

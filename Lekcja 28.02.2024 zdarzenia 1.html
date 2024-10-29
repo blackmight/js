@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lekcja 28.02.2024 zdarzenia 1</title>
+    </head>
+    <body>
+        <br><br>
+        <!-- metoda 1 - przypisania zdarzenia do znacznika -->
+        <img id="z1" src="https://picsum.photos/200" width=100 onclick='wypiszTekst("Ola ma psa")'>
+        <br>
+        <img id="z2" src="https://picsum.photos/200" width=100 onclick="f2()">
+        <br>
+        <p id="p1">To jest akapit</p>
+        <br>
+        <input type="text" id="t1" value="" />
+        <p id="paragraf1">Paragraf 1</p>
+        <p id="paragraf2">Paragraf 2</p>
+        <p id="paragraf3">Pokaż wysokość okna</p>
+        <script>
+            const wypiszTekst = (tekst) => {
+                alert(tekst)
+            }
+
+            function f2(){
+                document.getElementById('p1').innerText += " napis"
+                document.getElementById('t1').value = "Napis"
+            }
+
+            function f3() {
+                alert(window.innerHeight)
+            }
+            
+            function wypisz() {
+                alert("Ala ma kota")
+            }
+            //------------------------metoda 3 addEventListener----------------
+            document.addEventListener("click", function() {
+                document.getElementById('paragraf1').innerHTML = "Inny tekst "
+            })
+            //------------------------metoda 4 - selekcja elementu + zdarzenie ----------------
+            document.getElementById('t1').addEventListener('keypress', function (event) {
+                var kławisz = event.keyCode
+                //alert(kławisz)
+                document.getElementById('p1').innerHTML += String.fromCharCode(kławisz) + " ";
+            })
+        </script>
+    </body>
+</html>

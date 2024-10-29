@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Równanie kwadratowe</title>
+        <style>
+            *{
+                font-size: 30px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #s1{
+                background-color: aqua;
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="s1">
+        <script type="text/javascript">
+            // użytkownik podaje spółczynniki równanie kwadratowe a, b i c. Skrypt oblicza warpość delty i drukuje to, liczy pierwiastki tego równania i też drukuje
+            let a=parseInt(prompt("Podaj współczynnik a:",""))
+            let b=parseInt(prompt("Podaj współczynnik b:",""))
+            let c=parseInt(prompt("Podaj współczynnik c:",""))
+            
+            let delta=Math.pow(b,2) - 4 * a * c
+            document.write("delta="+delta)
+            let pierw_delta=Math.sqrt(delta)
+            if(delta>0)
+            {
+                let x1=(-b+pierw_delta)/(2*a)
+                document.write("<br>x1+"+x1)
+                let x2=(-b+pierw_delta)/(2*a)
+                document.write("<br>x2="+x2)
+            }
+            else if(delta==0)
+            {
+                let x12=-b/(2*a)
+                document.write("<br>x12 = "+x12)
+            }
+            else
+            {
+                document.write("<br>x nie należy do R")
+            }
+        </script>
+        </div>
+    </body>
+</html>

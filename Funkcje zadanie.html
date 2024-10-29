@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<head>
+<title>Funkcje zadanie 1</title>
+</head>
+<body>
+    <script type="text/javascript">
+     const f1 = (x) => {
+        return Math.round((3*x*x-2*x+Math.sqrt(x))/(3*x-1)*100)/100
+     }
+     
+     const f2 = (x) => {
+        return Math.sin(x)-Math.cos(x)/(3*x*x*x-2)
+     }
+    </script>
+    
+    <table border="3" width="200">
+        <tr>
+            <th>x</th><th>f1</th><th>f2</th>
+        </tr>
+        <script type="text/javascript">
+        let xp=parseInt(prompt("Podaj xp=",""))
+        let xk=parseInt(prompt("Podaj xk=",""))
+    
+    if(xp>=xk){
+        [xp, xk] = [xk, xp]
+     }     
+    
+        for(let x=xp;x<xk;x++){
+        document.write(`<tr><td>${xp}</td><td>${f1(xp)}</td><td>${f2(xp)}</td></tr>`)
+        }
+
+    document.write("xp = "+xp)
+    document.write("<br>xk = "+xk)
+        </script>
+    </table>   
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Zadanie_29_02_2024</title>
+
+    <style>
+
+        section {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: black solid 5px;
+            border-radius: 20px;
+        }
+
+        section:hover {
+            border: rgb(65, 65, 65) solid 5px;
+        }
+
+        div {
+            display: flex;
+            border-color: antiquewhite;
+            border: antiquewhite solid 5px;
+            width: 430px;
+            margin-top: 50px;
+            border-radius: 30px;
+            box-shadow: black 0 5px;
+        }
+
+    </style>    
+
+</head>
+<body>
+    
+    <!--Mamy 4 sekcje rozłożone na 2 linii. Jak najeżdżamy na to myszką tło jest losowego koloru, a jak wyjeżdżamy kolor wraca z powrotem-->
+
+    <div>
+    <section id="section-one" onmouseover="f1('section-one')"></section>
+    <section id="section-two" onmouseover="f1('section-two')"></section>
+    </div>
+    <div>
+    <section id="section-three" onmouseover="f1('section-three')"></section>
+    <section id="section-four" onmouseover="f1('section-four')"></section>
+    </div>
+
+    <script type="text/javascript">
+
+        let sekcje = document.querySelectorAll("section")
+
+        function f1(idSekcji){
+
+            for (let x=0; x<sekcje.length; x++) {
+
+                sekcje[x].style.backgroundColor = null
+
+            }
+
+            document.getElementById(idSekcji).style.backgroundColor = "rgb("+Math.round(Math.random()*254+1)+","+Math.round(Math.random()*254+1)+", "+Math.round(Math.random()*254+1)+")"
+
+        }
+
+    </script>
+
+</body>
+</html>

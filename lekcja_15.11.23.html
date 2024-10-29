@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lekcja 15.11.23</title>
+        <meta charset="UTF-8">
+        <style>
+        .czerwony{
+            color: red;
+        }
+        </style>
+    </head>
+    <body>
+<script type = "text/javascript">
+    let a = Math.floor(Math.random()*100)
+    let b = Math.floor(Math.random()*100)
+    console.log(a)
+    console.log(b)
+    if(a>b){
+        let t = a
+        a = b
+        b = t
+    }
+
+        document.write(`a = ${a} <br> b = ${b} <br>`)
+        for(x=0;x<100;x++){
+            g = Math.floor(Math.random()*100)
+            if(g>a && g<b) document.write(`<span class=czerwony>${g} </span>`)
+            else document.write(` ${g} `)
+        }
+
+        document.write("<br>Liczba g = " +g+ "</span>")
+</script>
+    </body>
+</html>

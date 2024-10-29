@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 25.04.2024</title>
+
+<style>
+
+        body {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+    #section-one {
+        width: 50%;
+        height: 100vh;
+        background-color: #f1f1f1;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+    }
+
+    #section-two {
+        width: 50%;
+        height: 100vh;
+        background-color: #1f1f1f;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+    }
+
+    #image1 {
+        box-shadow: #1f1f1f 0 0px 10px;
+        transition: border 0.5s;
+    }
+
+    #image1:hover {
+        border: #1f1f1f 4px solid;
+        border-radius: 5px;
+    }
+
+    #image2 {
+        box-shadow: #f1f1f1 0 0px 10px;
+        transition: border 0.5s;
+    }
+
+    #image2:hover {
+        border: #f1f1f1 4px solid;
+        border-radius: 5px;
+    }
+
+</style>
+
+</head>
+<body>
+
+    <section id="section-one"></section>
+    <section id="section-two"></section>
+
+    <script type="text/javascript">
+
+        var images = []
+        let sectionOne = document.getElementById("section-one")
+        let sectionTwo = document.getElementById("section-two")
+
+        for (let x = 0; x < 10; x++) {
+                let randomOne = Math.round(Math.random()*100)+100
+                let randomTwo = Math.round(Math.random()*100)+100
+                images.push(`https://picsum.photos/${randomOne}/${randomTwo}`)
+            }
+
+            for (let i = 0; i < 5; i++) {
+                let image = document.createElement("img")
+                image.src = images[i]
+                image.id = "image1"
+                sectionOne.appendChild(image)
+            }
+
+            for (let i = 5; i < 10; i++) {
+                let image = document.createElement("img")
+                image.src = images[i]
+                image.id = "image2"
+                sectionTwo.appendChild(image)
+            }
+
+        function generateImages() {
+
+            sectionOne.innerHTML = ""
+            sectionTwo.innerHTML = ""
+            images = []
+
+            for (let x = 0; x < 10; x++) {
+                let randomOne = Math.round(Math.random()*100)+100
+                let randomTwo = Math.round(Math.random()*100)+100
+                images.push(`https://picsum.photos/${randomOne}/${randomTwo}`)
+            }
+
+            for (let i = 0; i < 5; i++) {
+                let image = document.createElement("img")
+                image.src = images[i]
+                image.id = "image1"
+                sectionOne.appendChild(image)
+            }
+
+            for (let i = 5; i < 10; i++) {
+                let image = document.createElement("img")
+                image.src = images[i]
+                image.id = "image2"
+                sectionTwo.appendChild(image)
+            }
+
+        }
+
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "x" || e.key === "X") {
+                generateImages()
+            }
+        })
+
+    </script>
+    
+</body>
+</html>
